@@ -1,11 +1,9 @@
-# CS596 Research Topics — Assignment 2: CNN Architecture Comparison (CIFAR-10)
+# CNN Architecture Comparison on CIFAR-10
 
-Coursework for **CS596 – Special Topics on Deep Learning**, Bishop's University.
-
-A fully connected network and eight convolutional architectures are trained and compared on CIFAR-10
+A fully connected network and eight convolutional architectures trained and compared on CIFAR-10
 in PyTorch, all with the same recipe (SGD + momentum, cosine LR, standard augmentation) for a fair
-comparison. The solution is in
-[`A2_CNN_Architectures_CIFAR10.ipynb`](A2_CNN_Architectures_CIFAR10.ipynb); the architectures are in
+comparison. The full implementation and analysis is in
+[`cnn_architectures_cifar10.ipynb`](cnn_architectures_cifar10.ipynb); the architectures are in
 [`cifar_models.py`](cifar_models.py).
 
 ## Results (RTX 3080, 20 epochs each, GPU augmentation)
@@ -30,7 +28,7 @@ the residual/dense family giving the best accuracy-per-parameter under an identi
 
 ```bash
 pip install torch torchvision numpy pandas matplotlib   # CUDA build of torch for GPU
-jupyter notebook A2_CNN_Architectures_CIFAR10.ipynb
+jupyter notebook cnn_architectures_cifar10.ipynb
 ```
 
 CIFAR-10 is downloaded automatically by `torchvision`. `results.json` holds the per-model results.
@@ -39,7 +37,7 @@ CIFAR-10 is downloaded automatically by `torchvision`. `results.json` holds the 
 
 | File | Description |
 |------|-------------|
-| `A2_CNN_Architectures_CIFAR10.ipynb` | Training, comparison and discussion |
+| `cnn_architectures_cifar10.ipynb` | Training, comparison and discussion |
 | `cifar_models.py` | The nine CIFAR-adapted architectures |
 | `results.json` | Per-model test accuracy / params / time |
-| `Assignment 2.pdf` | Assignment description |
+| `PROJECT_BRIEF.pdf` | Project brief (goals, objectives, outcomes) |
